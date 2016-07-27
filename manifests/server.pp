@@ -18,4 +18,14 @@ class puppetvpn::server (
   exec { "/usr/bin/openssl dhparam -out ${puppetvpn::puppetvpn_dh} 2048":
     creates => $puppetvpn::puppetvpn_dh,
   }
+
+  file { $puppetvpn::puppetvpn_dh:
+    ensure => file,
+    owner  => 'root',
+    group  => $admin_group,
+    mode   => '0644',
+  }
+
+  Exec["/usr/bin/openssl dhparam -out ${puppetvpn::puppetvpn_dh} 2048"] ->
+  File[$puppetvpn::puppetvpn_dh]
 }
