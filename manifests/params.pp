@@ -20,6 +20,8 @@ class puppetvpn::params {
   $puppet_ca   = "${ssldir}/certs/ca.pem"
   $puppet_crl  = "${ssldir}/crl.pem"
 
+  $dh_size = 2048
+
   $puppetvpn_ta = "${openvpn::etcdir}/puppetvpn-ta.key"
-  $puppetvpn_dh = "${openvpn::etcdir}/puppetvpn-dh2048.pem"
+  $puppetvpn_dh = "${openvpn::etcdir}/puppetvpn-dh${dh_size}.pem"
 }
