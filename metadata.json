@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Romain Tartière",
   "summary": "Setup OpenVPN instances using Puppet PKI",
-  "license": "Apache 2.0",
+  "license": "MIT",
   "source": "https://github.com/opus-codium/puppet-puppetvpn",
   "project_page": "https://github.com/opus-codium/puppet-puppetvpn",
   "issues_url": "https://github.com/opus-codium/puppet-puppetvpn/issues",
