@@ -1,0 +1,5 @@
+fixtures:
+  repositories:
+    openvpn: "https://github.com/opus-codium/puppet-openvpn"
+  symlinks:
+    puppetvpn: "#{source_dir}"
