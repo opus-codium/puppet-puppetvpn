@@ -6,33 +6,6 @@ describe 'puppetvpn' do
       osfamily: 'Debian',
     }
   end
-  let(:params) do
-    {
-      ta: <<EOT
-#
-# 2048 bit OpenVPN static key
-#
------BEGIN OpenVPN Static key V1-----
-a3aa6e5669ce8b63b4748e302eb04a5a
-773538e2e030b28876b1ebec64a0eb1a
-c5092c79858b96812ab25b6dd9c9144e
-ef9ee2931067f8c306cc033d0f905c90
-7d459d5ccc61aa1fdfee40b3d7726793
-87ec23d31dde3499ed2789ed90f0baa0
-79dd83d3187ec064a70723f07896b8a9
-9544d62868038fdb39ea841cc389a18d
-44dd0ce3244089174fc37f0e87e3f496
-3c10db4e3472a3caeb9550e1a33f9507
-2e4ac1b275c8a00d2578b8a7cd910b60
-fdbab2154dc22e6df73f2dba7c59b4b7
-239c1f70a4bb3665f6aa30f90cb417fd
-a2af31414c3c5f5752f532d92b221b89
-5ca2c80462b33cc1148396b7f85f50e1
-58afc1ff392ff5c9ee20c4f492d4d6bd
------END OpenVPN Static key V1-----
-EOT
-    }
-  end
   context 'with defaults for all parameters' do
     it { should contain_class('puppetvpn') }
   end
