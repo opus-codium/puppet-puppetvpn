@@ -1,10 +1,10 @@
 class puppetvpn (
   $ta,
 ) inherits puppetvpn::params {
-  file { $puppetvpn_ta:
+  file { $puppetvpn::params::puppetvpn_ta:
     ensure  => file,
     owner   => 'root',
-    group   => $admin_group,
+    group   => $puppetvpn::params::admin_group,
     mode    => '0600',
     content => $ta,
   }

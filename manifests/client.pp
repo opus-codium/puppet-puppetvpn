@@ -3,9 +3,9 @@ class puppetvpn::client inherits puppetvpn::params {
 
   ::openvpn::client { 'puppetvpn':
     remote => $servername,
-    cert   => $puppet_cert,
-    key    => $puppet_key,
-    ca     => $puppet_ca,
-    ta     => $puppetvpn::puppetvpn_ta,
+    cert   => $puppetvpn::params::puppet_cert,
+    key    => $puppetvpn::params::puppet_key,
+    ca     => $puppetvpn::params::puppet_ca,
+    ta     => $puppetvpn::params::puppetvpn_ta,
   }
 }
