@@ -1,7 +1,7 @@
 {
   "name": "opuscodium-puppetvpn",
-  "version": "1.0.0",
-  "author": "Romain Tartière",
+  "version": "1.0.1",
+  "author": "Romain Tartiere",
   "summary": "Setup OpenVPN instances using Puppet PKI",
   "license": "MIT",
   "source": "https://github.com/opus-codium/puppet-puppetvpn",
