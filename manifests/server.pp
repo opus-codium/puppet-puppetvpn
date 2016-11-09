@@ -1,31 +1,34 @@
 class puppetvpn::server (
   $server,
   $netmask,
+  $dh_size = $puppetvpn::params::dh_size,
 ) inherits puppetvpn::params {
   include ::puppetvpn
 
-  ::openvpn::server { 'puppetvpn':
+  $puppetvpn_dh = "${puppetvpn::etcdir}/${puppetvpn::config_name}-dh${dh_size}.pem"
+
+  ::openvpn::server { $puppetvpn::config_name:
     server  => $server,
     netmask => $netmask,
     ca      => $puppetvpn::params::puppet_ca,
     cert    => $puppetvpn::params::puppet_cert,
     key     => $puppetvpn::params::puppet_key,
     crl     => $puppetvpn::params::puppet_crl,
-    ta      => $puppetvpn::params::puppetvpn_ta,
-    dh      => $puppetvpn::params::puppetvpn_dh,
+    ta      => $puppetvpn::puppetvpn_ta,
+    dh      => $puppetvpn_dh,
   }
 
-  exec { "/usr/bin/openssl dhparam -out ${puppetvpn::params::puppetvpn_dh} ${puppetvpn::params::dh_size}":
-    creates => $puppetvpn::puppetvpn_dh,
+  exec { "/usr/bin/openssl dhparam -out ${puppetvpn_dh} ${dh_size}":
+    creates => $puppetvpn_dh,
   }
 
-  file { $puppetvpn::puppetvpn_dh:
+  file { $puppetvpn_dh:
     ensure => file,
-    owner  => 'root',
-    group  => $puppetvpn::params::admin_group,
+    owner  => $puppetvpn::admin_user,
+    group  => $puppetvpn::admin_group,
     mode   => '0644',
   }
 
-  Exec["/usr/bin/openssl dhparam -out ${puppetvpn::params::puppetvpn_dh} ${puppetvpn::params::dh_size}"] ->
-  File[$puppetvpn::params::puppetvpn_dh]
+  Exec["/usr/bin/openssl dhparam -out ${puppetvpn_dh} ${dh_size}"] ->
+  File[$puppetvpn_dh]
 }
