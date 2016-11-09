@@ -6,6 +6,6 @@ class puppetvpn::client inherits puppetvpn::params {
     cert   => $puppetvpn::params::puppet_cert,
     key    => $puppetvpn::params::puppet_key,
     ca     => $puppetvpn::params::puppet_ca,
-    ta     => $puppetvpn::params::puppetvpn_ta,
+    ta     => $puppetvpn::puppetvpn_ta,
   }
 }
