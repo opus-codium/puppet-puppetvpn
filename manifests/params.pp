@@ -3,11 +3,13 @@ class puppetvpn::params {
 
   case $::osfamily {
     'Debian': {
+      $etcdir = '/etc/openvpn'
       $ssldir = '/var/lib/puppet/ssl'
       $admin_user = 'root'
       $admin_group = 'root'
     }
     'FreeBSD': {
+      $etcdir = '/usr/local/etc/openvpn'
       $ssldir = '/var/puppet/ssl'
       $admin_user = 'root'
       $admin_group = 'wheel'
