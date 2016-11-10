@@ -1,6 +1,7 @@
 class puppetvpn::server (
   $server,
   $netmask,
+  $dev = 'tun',
   $dh_size = $puppetvpn::params::dh_size,
 ) inherits puppetvpn::params {
   include ::puppetvpn
@@ -17,6 +18,7 @@ class puppetvpn::server (
     ta         => $puppetvpn::ta,
     ta_content => $puppetvpn::ta_content,
     dh         => $puppetvpn_dh,
+    dev        => $dev,
   }
 
   exec { "/usr/bin/openssl dhparam -out ${puppetvpn_dh} ${dh_size}":

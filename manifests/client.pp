@@ -1,4 +1,6 @@
-class puppetvpn::client inherits puppetvpn::params {
+class puppetvpn::client (
+  $dev = 'tun',
+) inherits puppetvpn::params {
   include ::puppetvpn
 
   ::openvpn::client { $puppetvpn::config_name:
@@ -8,5 +10,6 @@ class puppetvpn::client inherits puppetvpn::params {
     ca         => $puppetvpn::params::puppet_ca,
     ta         => $puppetvpn::ta,
     ta_content => $puppetvpn::ta_content,
+    dev        => $dev,
   }
 }
