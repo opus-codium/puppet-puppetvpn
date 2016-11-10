@@ -22,17 +22,6 @@ Infrastructure.
 
 ## Setup
 
-On all nodes:
-
-~~~puppet
-class { 'puppetvpn':
-  ta => '...' # OpenVPN static key
-              #
-              # Generate yours with:
-              # openvpn --genkey --secret ta.key
-}
-~~~
-
 On the Puppet master:
 
 ~~~puppet
