@@ -8,14 +8,15 @@ class puppetvpn::server (
   $puppetvpn_dh = "${puppetvpn::etcdir}/${puppetvpn::config_name}-dh${dh_size}.pem"
 
   ::openvpn::server { $puppetvpn::config_name:
-    server  => $server,
-    netmask => $netmask,
-    ca      => $puppetvpn::params::puppet_ca,
-    cert    => $puppetvpn::params::puppet_cert,
-    key     => $puppetvpn::params::puppet_key,
-    crl     => $puppetvpn::params::puppet_crl,
-    ta      => $puppetvpn::puppetvpn_ta,
-    dh      => $puppetvpn_dh,
+    server     => $server,
+    netmask    => $netmask,
+    ca         => $puppetvpn::params::puppet_ca,
+    cert       => $puppetvpn::params::puppet_cert,
+    key        => $puppetvpn::params::puppet_key,
+    crl        => $puppetvpn::params::puppet_crl,
+    ta         => $puppetvpn::ta,
+    ta_content => $puppetvpn::ta_content,
+    dh         => $puppetvpn_dh,
   }
 
   exec { "/usr/bin/openssl dhparam -out ${puppetvpn_dh} ${dh_size}":

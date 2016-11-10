@@ -1,5 +1,6 @@
 ---
-puppetvpn::ta: |
+puppetvpn::ta: true
+puppetvpn::ta_content: |
   #
   # 2048 bit OpenVPN static key
   #
