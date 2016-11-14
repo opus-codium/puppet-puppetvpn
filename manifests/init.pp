@@ -1,6 +1,6 @@
 class puppetvpn (
-  $ta = false,
-  $ta_content = undef,
+  $tls_auth_enabled = false,
+  $tls_auth_content = undef,
   $admin_group = $puppetvpn::params::admin_group,
   $admin_user = $puppetvpn::params::admin_user,
   $config_name = $puppetvpn::params::config_name,

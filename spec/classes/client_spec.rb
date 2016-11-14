@@ -11,7 +11,7 @@ describe 'puppetvpn::client' do
 
   it do
     is_expected.to contain_openvpn__client('puppetvpn').with(
-      remote: 'puppet.example.com',
+      remote_host: 'puppet.example.com',
       ca: '/var/lib/puppet/ssl/certs/ca.pem',
       cert: '/var/lib/puppet/ssl/certs/example.com.pem',
       key: '/var/lib/puppet/ssl/private_keys/example.com.pem',

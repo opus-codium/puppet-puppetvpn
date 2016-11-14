@@ -1,6 +1,6 @@
 ---
-puppetvpn::ta: true
-puppetvpn::ta_content: |
+puppetvpn::tls_auth_enabled: true
+puppetvpn::tls_auth_content: |
   #
   # 2048 bit OpenVPN static key
   #
