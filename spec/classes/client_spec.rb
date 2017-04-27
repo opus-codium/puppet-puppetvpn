@@ -4,7 +4,7 @@ describe 'puppetvpn::client' do
   let(:facts) do
     {
       osfamily: 'Debian',
-      servername: 'puppet.example.com',
+      puppet_server: 'puppet.example.com',
     }
   end
   let(:node) { 'example.com' }
