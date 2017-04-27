@@ -4,7 +4,7 @@ class puppetvpn::client (
   include ::puppetvpn
 
   ::openvpn::client { $puppetvpn::config_name:
-    remote_host      => $servername,
+    remote_host      => $::puppet_server,
     cert             => $puppetvpn::params::puppet_cert,
     key              => $puppetvpn::params::puppet_key,
     ca               => $puppetvpn::params::puppet_ca,
