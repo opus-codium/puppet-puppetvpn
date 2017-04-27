@@ -32,6 +32,6 @@ class puppetvpn::server (
     mode   => '0644',
   }
 
-  Exec["/usr/bin/openssl dhparam -out ${puppetvpn_dh} ${dh_size}"] ->
-  File[$puppetvpn_dh]
+  Exec["/usr/bin/openssl dhparam -out ${puppetvpn_dh} ${dh_size}"]
+  -> File[$puppetvpn_dh]
 }
