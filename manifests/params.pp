@@ -4,7 +4,11 @@ class puppetvpn::params {
   case $::osfamily {
     'Debian': {
       $etcdir = '/etc/openvpn'
-      $ssldir = '/var/lib/puppet/ssl'
+      if $facts['aio_agent_version'] {
+        $ssldir = '/etc/puppetlabs/puppet/ssl'
+      } else {
+        $ssldir = '/var/lib/puppet/ssl'
+      }
       $admin_user = 'root'
       $admin_group = 'root'
     }
