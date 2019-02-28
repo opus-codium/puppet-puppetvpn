@@ -1,6 +1,6 @@
 # puppetvpn
 
-[![Build Status](https://travis-ci.org/opus-codium/puppet-puppetvpn.svg?branch=master)](https://travis-ci.org/opus-codium/puppet-puppetvpn)
+[![Build Status](https://travis-ci.com/opus-codium/puppet-puppetvpn.svg?branch=master)](https://travis-ci.com/opus-codium/puppet-puppetvpn)
 
 #### Table of Contents
 
