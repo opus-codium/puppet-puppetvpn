@@ -1,5 +1,6 @@
+# @param dev
 class puppetvpn::client (
-  $dev = 'tun',
+  Enum['tap', 'tun'] $dev = 'tun',
 ) inherits puppetvpn::params {
   include ::puppetvpn
 

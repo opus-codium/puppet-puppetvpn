@@ -1,8 +1,12 @@
+# @param server_network
+# @param server_netmask
+# @param dev
+# @param dh_size
 class puppetvpn::server (
-  $server_network,
-  $server_netmask,
-  $dev = 'tun',
-  $dh_size = $puppetvpn::params::dh_size,
+  Stdlib::IP::Address $server_network,
+  Stdlib::IP::Address $server_netmask,
+  Enum['tap', 'tun']  $dev = 'tun',
+  Integer             $dh_size = $puppetvpn::params::dh_size,
 ) inherits puppetvpn::params {
   include ::puppetvpn
 
