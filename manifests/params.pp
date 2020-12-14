@@ -1,7 +1,7 @@
 class puppetvpn::params {
   include openvpn
 
-  case $::osfamily {
+  case $facts.get('os.family') {
     'Debian': {
       $etcdir = '/etc/openvpn'
       if $facts['aio_agent_version'] {
@@ -19,7 +19,7 @@ class puppetvpn::params {
       $admin_group = 'wheel'
     }
     default: {
-      fail "Unsupported operating system ${::osfamily}"
+      fail "Unsupported operating system ${facts.get('os.family')}"
     }
   }
 
