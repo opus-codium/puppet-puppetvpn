@@ -7,9 +7,37 @@
   "source": "https://github.com/opus-codium/puppet-puppetvpn",
   "project_page": "https://github.com/opus-codium/puppet-puppetvpn",
   "issues_url": "https://github.com/opus-codium/puppet-puppetvpn/issues",
+  "data_provider": "hiera",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "FreeBSD",
+      "operatingsystemrelease": [
+        "11",
+        "12"
+      ]
+    }
+  ],
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.15.0 < 2.0.0"},
-    {"name":"opuscodium-openvpn","version_requirement":"2.x"}
+    {
+      "name":"puppetlabs-stdlib",
+      "version_requirement":">= 1.15.0 < 2.0.0"
+    },
+    {
+      "name":"opuscodium-openvpn",
+      "version_requirement":"2.x"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 5.0.0 < 8.0.0"
+    }
   ]
 }
 
