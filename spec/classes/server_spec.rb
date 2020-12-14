@@ -9,6 +9,9 @@ describe 'puppetvpn::server' do
   end
   let(:facts) do
     {
+      os: {
+        family: 'Debian',
+      },
       osfamily: 'Debian',
     }
   end

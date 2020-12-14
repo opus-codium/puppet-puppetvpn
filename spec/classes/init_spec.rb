@@ -3,6 +3,9 @@ require 'spec_helper'
 describe 'puppetvpn' do
   let(:facts) do
     {
+      os: {
+        family: 'Debian',
+      },
       osfamily: 'Debian',
     }
   end

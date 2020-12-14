@@ -2,10 +2,10 @@
 class puppetvpn::client (
   Enum['tap', 'tun'] $dev = 'tun',
 ) inherits puppetvpn::params {
-  include ::puppetvpn
+  include puppetvpn
 
-  ::openvpn::client { $puppetvpn::config_name:
-    remote_host      => $::puppet_server,
+  openvpn::client { $puppetvpn::config_name:
+    remote_host      => $facts['puppet_server'],
     cert             => $puppetvpn::params::puppet_cert,
     key              => $puppetvpn::params::puppet_key,
     ca               => $puppetvpn::params::puppet_ca,

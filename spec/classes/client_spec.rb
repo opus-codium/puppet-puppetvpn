@@ -3,6 +3,9 @@ require 'spec_helper'
 describe 'puppetvpn::client' do
   let(:facts) do
     {
+      os: {
+        family: 'Debian',
+      },
       osfamily: 'Debian',
       puppet_server: 'puppet.example.com',
     }

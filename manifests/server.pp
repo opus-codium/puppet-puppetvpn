@@ -8,11 +8,11 @@ class puppetvpn::server (
   Enum['tap', 'tun']  $dev = 'tun',
   Integer             $dh_size = $puppetvpn::params::dh_size,
 ) inherits puppetvpn::params {
-  include ::puppetvpn
+  include puppetvpn
 
   $puppetvpn_dh = "${puppetvpn::etcdir}/${puppetvpn::config_name}-dh${dh_size}.pem"
 
-  ::openvpn::server { $puppetvpn::config_name:
+  openvpn::server { $puppetvpn::config_name:
     server_network   => $server_network,
     server_netmask   => $server_netmask,
     ca               => $puppetvpn::params::puppet_ca,
