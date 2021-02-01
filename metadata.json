@@ -7,7 +7,6 @@
   "source": "https://github.com/opus-codium/puppet-puppetvpn",
   "project_page": "https://github.com/opus-codium/puppet-puppetvpn",
   "issues_url": "https://github.com/opus-codium/puppet-puppetvpn/issues",
-  "data_provider": "hiera",
   "operatingsystem_support": [
     {
       "operatingsystem": "Debian",
