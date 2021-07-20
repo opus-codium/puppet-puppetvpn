@@ -1,15 +1,26 @@
 # puppetvpn
 
-[![Build Status](https://travis-ci.com/opus-codium/puppet-puppetvpn.svg?branch=master)](https://travis-ci.com/opus-codium/puppet-puppetvpn)
+<!-- header GFM -->
+[![Build Status](https://img.shields.io/github/workflow/status/opus-codium/puppet-puppetvpn/Release)](https://github.com/opus-codium/puppet-puppetvpn/releases)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/opuscodium/puppetvpn.svg)](https://forge.puppetlabs.com/opuscodium/puppetvpn)
+[![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/opuscodium/puppetvpn.svg)](https://forge.puppetlabs.com/opuscodium/puppetvpn)
+[![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/opuscodium/puppetvpn.svg)](https://forge.puppetlabs.com/opuscodium/puppetvpn)
+[![Puppet Forge - scores](https://img.shields.io/puppetforge/f/opuscodium/puppetvpn.svg)](https://forge.puppetlabs.com/opuscodium/puppetvpn)
+[![License](https://img.shields.io/github/license/opus-codium/puppet-puppetvpn.svg)](https://github.com/voxpupuli/opuscodium-puppetvpn/blob/master/LICENSE.md)
+<!-- header -->
 
 #### Table of Contents
 
-1. [Overview](#overview)
-2. [Module Description](#module-description)
-3. [Setup](#setup)
-4. [Usage](#usage)
-5. [Limitations](#limitations)
-6. [Contributing](#contributing)
+<!-- vim-markdown-toc GFM -->
+
+* [Overview](#overview)
+* [Module Description](#module-description)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Limitations](#limitations)
+* [Contributing](#contributing)
+
+<!-- vim-markdown-toc -->
 
 ## Overview
 
