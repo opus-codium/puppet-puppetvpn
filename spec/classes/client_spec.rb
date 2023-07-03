@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'puppetvpn::client' do
@@ -17,7 +19,7 @@ describe 'puppetvpn::client' do
       remote_host: 'puppet.example.com',
       ca: '/var/lib/puppet/ssl/certs/ca.pem',
       cert: '/var/lib/puppet/ssl/certs/example.com.pem',
-      key: '/var/lib/puppet/ssl/private_keys/example.com.pem',
+      key: '/var/lib/puppet/ssl/private_keys/example.com.pem'
     )
   end
 end

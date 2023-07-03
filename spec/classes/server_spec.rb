@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'puppetvpn::server' do
@@ -24,7 +26,7 @@ describe 'puppetvpn::server' do
       ca: '/var/lib/puppet/ssl/certs/ca.pem',
       cert: '/var/lib/puppet/ssl/certs/example.com.pem',
       key: '/var/lib/puppet/ssl/private_keys/example.com.pem',
-      crl_verify_file: '/var/lib/puppet/ssl/crl.pem',
+      crl_verify_file: '/var/lib/puppet/ssl/crl.pem'
     )
   end
 end
